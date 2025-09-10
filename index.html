@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <section class="weather py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="display-4 fw-bold mb-3">Weather Forecast</h1>
+          <p class="lead">Get the latest weather updates for any location</p>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8">
+            <div class="input-group d-flex justify-content-center gap-3">
+              <input
+                type="search"
+                placeholder="Find your location..."
+                class="search-box form-control w-75"
+                id="searchInput"
+                name="searchInput"
+              />
+              <button
+                class="btn btn-light px-4 rounded-4"
+                type="button"
+                title="Search"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+              <input
+                type="number"
+                value="1"
+                placeholder="1"
+                class="day-box form-control"
+                id="numberDaysInput"
+                name="numberDaysInput"
+                minlength="1"
+                maxlength="6"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="current-weather mb-5" id="current">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+              <h2 class="current-city"></h2>
+              <p class="text-capitalize mb-0"></p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div class="current-temp"></div>
+            </div>
+          </div>
+
+          <div class="current-details">
+            <div class="row justify-content-center"> </div>
+          </div>
+        </div>
+
+        <h3 class="mb-4" id="numberDays"></h3>
+        <div class="weather-days">
+          <div class="row justify-content-center gap-3" id="rowForecastDays">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
