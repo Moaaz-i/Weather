@@ -89,6 +89,7 @@ async function getWeather(cityOrCountry = 'Cairo', _days = 3) {
       const dayName = days[date.getDay()];
 
       const card = document.createElement('div');
+      card.className = 'w-50 p-2';
       card.innerHTML = `
         <div class="weather-card card h-100">
           <div class="card-header text-center fw-bold">${dayName}</div>
