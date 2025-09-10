@@ -90,13 +90,18 @@ async function getWeather(cityOrCountry = 'Cairo', _days = 3) {
 
       const card = document.createElement('div');
       card.innerHTML = `
-        <div class="weather-card card">
-          <div class="card-header">${dayName}</div>
-          <div class="card-body text-center">
-            <img src="${day.day.condition.icon}" alt="${day.day.condition.text}" class="weather-icon mb-3" />
+        <div class="weather-card card h-100">
+          <div class="card-header text-center fw-bold">${dayName}</div>
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <img 
+              src="${day.day.condition.icon}" 
+              alt="${day.day.condition.text}" 
+              class="weather-icon mb-3 mx-auto" 
+              style="max-width: 80px;"
+            />
             <h5 class="city-name">${city}</h5>
-            <p class="temperature">${Math.round((day.day.maxtemp_c + day.day.mintemp_c) / 2)}°C</p>
-            <p class="text-info">${day.day.condition.text}</p>
+            <p class="temperature fs-4 fw-semibold">${Math.round((day.day.maxtemp_c + day.day.mintemp_c) / 2)}°C</p>
+            <p class="text-info small">${day.day.condition.text}</p>
           </div>
         </div>
       `;
